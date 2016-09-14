@@ -31,15 +31,15 @@ def handler(line):
     if not datastore:
         if domain_id in ("1", "2", "5"):
             if domain_id == "1":
-                SHOP_CLIENT = Client(domain="shop", trackers=['10.1.115.13:6001'])
+                SHOP_CLIENT = Client(domain="shop", trackers=[''])
                 if SHOP_CLIENT:
                     datastore = SHOP_CLIENT
             elif domain_id == "2":
-                GROUP_CLIENT = Client(domain="group", trackers=['10.1.115.13:6001'])
+                GROUP_CLIENT = Client(domain="group", trackers=[''])
                 if GROUP_CLIENT:
                     datastore = GROUP_CLIENT
             elif domain_id == "5":
-                CI_CLIENT = Client(domain="ci", trackers=['10.1.115.13:6001'])
+                CI_CLIENT = Client(domain="ci", trackers=[''])
                 if CI_CLIENT:
                     datastore = CI_CLIENT
             if not datastore:
